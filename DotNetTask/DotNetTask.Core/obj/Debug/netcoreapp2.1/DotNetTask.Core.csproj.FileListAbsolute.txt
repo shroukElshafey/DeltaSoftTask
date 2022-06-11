@@ -1,0 +1,9 @@
+D:\CoreAPI\DotNetTask\DotNetTask.Core\bin\Debug\netcoreapp2.1\DotNetTask.Core.deps.json
+D:\CoreAPI\DotNetTask\DotNetTask.Core\bin\Debug\netcoreapp2.1\DotNetTask.Core.dll
+D:\CoreAPI\DotNetTask\DotNetTask.Core\bin\Debug\netcoreapp2.1\DotNetTask.Core.pdb
+D:\CoreAPI\DotNetTask\DotNetTask.Core\obj\Debug\netcoreapp2.1\DotNetTask.Core.csproj.CoreCompileInputs.cache
+D:\CoreAPI\DotNetTask\DotNetTask.Core\obj\Debug\netcoreapp2.1\DotNetTask.Core.AssemblyInfoInputs.cache
+D:\CoreAPI\DotNetTask\DotNetTask.Core\obj\Debug\netcoreapp2.1\DotNetTask.Core.AssemblyInfo.cs
+D:\CoreAPI\DotNetTask\DotNetTask.Core\obj\Debug\netcoreapp2.1\DotNetTask.Core.dll
+D:\CoreAPI\DotNetTask\DotNetTask.Core\obj\Debug\netcoreapp2.1\DotNetTask.Core.pdb
+D:\CoreAPI\DotNetTask\DotNetTask.Core\obj\Debug\netcoreapp2.1\DotNetTask.Core.csprojAssemblyReference.cache

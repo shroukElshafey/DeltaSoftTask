@@ -1,0 +1,74 @@
+<div class="container">
+<div class="d-flex flex-row bd-highlight mb-3">
+
+    <div class="form-froup row" style="width: 60%;">
+    
+        <label class="col-sm-2 col-form-label">Assign To</label>
+        <div class="col-sm-10">
+            <div class="ng-autocomplete">
+                <ng-autocomplete name="memberName" ngModel #memberName="ngModel" class="form-control" required
+                    [data]="MemberList" [searchKeyword]="keyword" placeholder="AutoComplete member Name"
+                    (selected)='selectEvent($event)' (inputChanged)='onChangeSearch($event)'
+                    [itemTemplate]="itemTemplate" [notFoundTemplate]="notFoundTemplate">
+                </ng-autocomplete>
+
+                <ng-template #itemTemplate let-item>
+                    <a [innerHTML]="item.MemberName"></a>
+                </ng-template>
+
+                <ng-template #notFoundTemplate let-notFound>
+                    <div [innerHTML]="notFound"></div>
+                </ng-template>
+            </div>
+        </div>
+    
+        <label class="col-sm-2 col-form-label">Deliver Date</label>
+        <div class="col-sm-10">
+            <input type="date"  [(ngModel)]="DeliverDate" required>
+        </div>
+        <label class="col-sm-2 col-form-label">Description</label>
+        <div class="col-sm-10">
+            <textarea type="text" class="form-control" [(ngModel)]="Description"
+            placeholder="Enter Description" required></textarea>
+        </div>
+        <div class="col-sm-12">
+            <button (click)="addTask()"  class="btn btn-primary">
+                Add
+            </button> 
+        </div>
+    
+   </div>
+
+</div>
+</div>  
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Member Full Name</th>
+            <th>Deliver Date</th>
+            <th>Description</th>
+            <th>Is Done</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of TaskList">
+            <td>{{dataItem.member.memberName}}</td>
+            <td>{{dataItem.deliverDate}}</td>
+            <td>{{dataItem.description}}</td>
+            <td>
+                
+                              <div class="row" style=" display: flex; justify-content: flex-end;">
+                                <div class="col-md-2 ml-auto">
+                                    <div *ngIf="dataItem.isDone"> <label style="color:red">Done</label></div>
+                                    <div *ngIf="!dataItem.isDone">
+                                        <input [value]="dataItem.isDone" (change)="onCheckboxChange(dataItem,$event)"
+                                            type="checkbox" name="" id="markAsDone">
+                                        <label for="markAsDone">Mark as done</label>
+                                    </div>
+                                </div>
+                            </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
